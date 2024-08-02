@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: my-discord-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    postdeploy: npm run register-commands
